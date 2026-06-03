@@ -17,7 +17,7 @@ const isActive = (path: string) => {
 </script>
 
 <template>
-  <div class="min-h-screen ps-[250px] bg-white-950 text-slate-100 flex flex-col md:flex-row relative overflow-hidden font-sans">
+  <div class="min-h-screen md:ps-[250px] bg-white-950 text-slate-100 flex flex-col md:flex-row relative overflow-hidden font-sans">
     <!-- Golden Backdrop Blur Blobs -->
     <div class="glow-blob w-[300px] h-[300px] bg-gold-500 top-[-50px] right-[-50px]"></div>
     <div class="glow-blob w-[400px] h-[400px] bg-amber-600 bottom-[-100px] left-[-100px]"></div>
