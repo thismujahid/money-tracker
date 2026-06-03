@@ -140,9 +140,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'دفتر المصاريف | تتبع مصاريفك وديونك',
+      title: 'دفتر المصاريف',
       meta: [
-        { name: 'description', content: 'برنامج حديث لتتبع المصاريف والديون بتصميم ذهبي عصري' },
+        { name: 'description', content: 'تتبع مصاريفك وديونك وسجل كل حاجة بتصرفها أو بتستلفها خلال يومك بسهولة.' },
         // إعدادات الـ PWA للآيفون (iOS)
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
