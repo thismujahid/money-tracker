@@ -107,6 +107,11 @@ const isActive = (path: string) => {
     <main class="flex-1 flex flex-col min-w-0 z-10 relative overflow-y-auto pb-24 md:pb-6">
       <div class="max-w-6xl w-full mx-auto p-4 md:p-8 flex-1">
         <slot />
+        <footer class="text-center py-4 mt-8">
+      <p class="text-sm text-gray-500 text-[40px]">
+        Developed with ❤️ By <a href="https://thismujahid.github.io" class="text-gold-400 font-bold hover:underline" target="_blank">Muhammad Mujahid</a>
+      </p>
+    </footer>
       </div>
     </main>
 
