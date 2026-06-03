@@ -4,7 +4,6 @@ import { getFirestore } from 'firebase/firestore'
 
 export const useFirebase = () => {
   const config = useRuntimeConfig()
-  
   // Check if configuration is present
   const isFirebaseConfigured = !!(
     config.public.firebaseApiKey &&

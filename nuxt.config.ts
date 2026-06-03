@@ -25,21 +25,83 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'دفتر المصاريف',
-      short_name: 'دفتر المصاريف',
-      description: 'برنامج حديث لتتبع مصاريفك وديونك بتصميم ذهبي عصري',
-      theme_color: '#0a0e17',
-      background_color: '#05070c',
-      display: 'standalone',
-      orientation: 'portrait',
-      dir: 'rtl',
-      lang: 'ar',
-      icons: [
+      "name": "دفتر المصاريف",
+      "short_name": "دفتر المصاريف",
+      "description": "تتبع مصاريفك وديونك بسهولة مع دفتر المصاريف. قم بإدارة ميزانيتك، تتبع نفقاتك، وتذكير نفسك بالديون المستحقة. تطبيق بسيط وفعال لتنظيم أمورك المالية.",
+      "theme_color": "#0a0e17",
+      "background_color": "#05070c",
+      "display": "standalone",
+      "orientation": "portrait",
+      "dir": "rtl",
+      "lang": "ar",
+      "start_url": "/",
+      "id": "/?source=pwa",
+      "icons": [
         {
-          src: 'icon.svg',
-          sizes: 'any',
-          type: 'image/svg+xml',
-          purpose: 'any maskable'
+          "src": "icons/icon-48x48.png",
+          "sizes": "48x48",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-72x72.png",
+          "sizes": "72x72",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-128x128.png",
+          "sizes": "128x128",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-152x152.png",
+          "sizes": "152x152",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-384x384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+        },
+        {
+          "src": "icons/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "screenshot-desktop.png",
+          "sizes": "1280x720",
+          "type": "image/png",
+          "form_factor": "wide",
+          "label": "الواجهة الرئيسية للتطبيق على الكمبيوتر"
+        },
+        {
+          "src": "screenshot-mobile.png",
+          "sizes": "390x844",
+          "type": "image/png",
+          "form_factor": "narrow",
+          "label": "شاشة تتبع المصاريف والديون على الجوال"
         }
       ]
     },
@@ -79,7 +141,6 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
-        { rel: 'manifest',  href: '/manifest.json' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap' }
