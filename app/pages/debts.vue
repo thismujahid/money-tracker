@@ -111,7 +111,7 @@ const handleDeleteRepayment = async (debtId: string, paymentId: string) => {
         <h2 class="text-2xl md:text-3xl font-bold text-slate-100 flex items-center gap-2">
           تتبع <span class="gold-gradient-text">الديون والالتزامات</span>
         </h2>
-        <p class="text-slate-400 mt-1">سجل الديون المستحقة عليك للآخرين وتابع دفعات السداد الجزئية.</p>
+        <p class="text-slate-400 mt-1">سجل الديون المستحقة عليك للآخرين وتابع دفعات السداد.</p>
       </div>
 
       <!-- Quick Total Debt Display -->
@@ -140,13 +140,13 @@ const handleDeleteRepayment = async (debtId: string, paymentId: string) => {
         <form @submit.prevent="handleAddDebt" class="space-y-5">
           <!-- Creditor Input -->
           <div>
-            <label for="creditor" class="block text-xs font-semibold text-slate-400 mb-2">الدائن (أخي، صديقي، فلان...)</label>
+            <label for="creditor" class="block text-xs font-semibold text-slate-400 mb-2">الدائن</label>
             <input
               id="creditor"
               v-model="creditor"
               type="text"
               required
-              placeholder="مثال: أخي محمد، أحمد عبد الله"
+              placeholder="مثال: أخي صالح، اسامة صلاح"
               class="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-all"
             />
           </div>
@@ -172,13 +172,13 @@ const handleDeleteRepayment = async (debtId: string, paymentId: string) => {
 
           <!-- Reason / Details -->
           <div>
-            <label for="reason" class="block text-xs font-semibold text-slate-400 mb-2">بند الاستلاف / تفاصيل الدين</label>
+            <label for="reason" class="block text-xs font-semibold text-slate-400 mb-2">تفاصيل الدين</label>
             <input
               id="reason"
               v-model="reason"
               type="text"
               required
-              placeholder="مثال: شراء لبن، تكملة إيجار الشقة"
+              placeholder="مثال: شراء فون جديد"
               class="w-full bg-slate-900/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-all"
             />
           </div>
@@ -211,8 +211,8 @@ const handleDeleteRepayment = async (debtId: string, paymentId: string) => {
         <!-- Empty State -->
         <div v-else-if="finance.debts.length === 0" class="flex-1 flex flex-col items-center justify-center text-center text-slate-500 gap-3 py-12 border border-dashed border-slate-800 rounded-xl">
           <i class="pi pi-check-circle text-4xl text-emerald-500/40"></i>
-          <span class="text-base font-semibold">ممتاز! لا توجد ديون مسجلة عليك</span>
-          <p class="text-xs text-slate-400 max-w-xs">يمكنك إضافة ديون من النموذج على اليمين إذا استلفت أي مبلغ.</p>
+          <span class="text-base font-semibold">الحمدللة! مفيش أي ديون مسجلة عليك لحد الأن</span>
+          <p class="text-xs text-slate-400 max-w-xs">يمكنك إضافة ديون من النموذج على اليمين لو استلفت أي مبلغ.</p>
         </div>
 
         <!-- Debts List Accordion -->

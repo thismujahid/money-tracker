@@ -17,14 +17,14 @@ const isActive = (path: string) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-darkbg-950 text-slate-100 flex flex-col md:flex-row relative overflow-hidden font-sans">
+  <div class="min-h-screen ps-[250px] bg-white-950 text-slate-100 flex flex-col md:flex-row relative overflow-hidden font-sans">
     <!-- Golden Backdrop Blur Blobs -->
     <div class="glow-blob w-[300px] h-[300px] bg-gold-500 top-[-50px] right-[-50px]"></div>
     <div class="glow-blob w-[400px] h-[400px] bg-amber-600 bottom-[-100px] left-[-100px]"></div>
     <div class="glow-blob w-[250px] h-[250px] bg-yellow-500 top-[40%] left-[20%]"></div>
 
     <!-- Desktop Sidebar (Right side for RTL) -->
-    <aside class="hidden md:flex flex-col w-64 glass-panel border-l border-r-0 border-t-0 border-b-0 z-10 p-5 shrink-0">
+    <aside class="hidden h-screen fixed right-0 z-20 top-0 md:flex flex-col w-64 glass-panel border-l border-r-0 border-t-0 border-b-0 p-5 shrink-0">
       <!-- App Logo / Title -->
       <div class="flex items-center gap-3 mb-8 pb-4 border-b border-slate-800">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-gold-600 to-amber-400 flex items-center justify-center shadow-gold-glow">
@@ -105,7 +105,7 @@ const isActive = (path: string) => {
 
     <!-- Main Content Area -->
     <main class="flex-1 flex flex-col min-w-0 z-10 relative overflow-y-auto pb-24 md:pb-6">
-      <div class="max-w-6xl w-full mx-auto p-4 md:p-8 flex-1">
+      <div class="w-full mx-auto p-4 md:p-8 flex-1">
         <slot />
         <footer class="text-center py-4 mt-8">
       <p class="text-sm text-gray-500 text-[40px]">
