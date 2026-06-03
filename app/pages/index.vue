@@ -36,7 +36,7 @@ const handleDeleteActivity = async (activity: any) => {
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold text-slate-100 flex items-center gap-2">
-          مرحباً بك في <span class="gold-gradient-text">مُصَيْرف</span>
+          مرحباً بك في <span class="gold-gradient-text">دفتر المصاريف</span>
         </h2>
         <p class="text-slate-400 mt-1">تتبع كاشك، ديونك، والتزاماتك المالية بكل سهولة في مكان واحد.</p>
       </div>

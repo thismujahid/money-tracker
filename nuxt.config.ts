@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'مُصَيْرف | تتبع مصاريفك وديونك',
+      title: 'دفتر المصاريف | تتبع مصاريفك وديونك',
       meta: [
         { name: 'description', content: 'برنامج حديث لتتبع المصاريف والديون بتصميم ذهبي عصري' }
       ],

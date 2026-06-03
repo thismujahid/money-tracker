@@ -31,7 +31,7 @@ const isActive = (path: string) => {
           <i class="pi pi-chart-line text-darkbg-950 text-xl font-bold"></i>
         </div>
         <div>
-          <h1 class="text-xl font-bold gold-gradient-text tracking-wide font-outfit">كراسة المصاريف</h1>
+          <h1 class="text-xl font-bold gold-gradient-text tracking-wide font-outfit">دفتر المصاريف</h1>
           <p class="text-xs text-slate-400">تتبع مصاريفك وديونك</p>
         </div>
       </div>
@@ -83,7 +83,7 @@ const isActive = (path: string) => {
           <i class="pi pi-chart-line text-darkbg-950 text-lg"></i>
         </div>
         <div>
-          <h1 class="text-lg font-bold gold-gradient-text">مُصَيْرف</h1>
+          <h1 class="text-lg font-bold gold-gradient-text">دفتر المصاريف</h1>
         </div>
       </div>
 

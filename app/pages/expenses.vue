@@ -64,9 +64,9 @@ const handleDeleteTransaction = async (id: string) => {
     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold text-slate-100 flex items-center gap-2">
-          إدارة <span class="gold-gradient-text">المصاريف والكاش</span>
+          إدارة <span class="gold-gradient-text">المصاريف</span>
         </h2>
-        <p class="text-slate-400 mt-1">تتبع كاشك الحالي وسجل كافة الواردات والمصروفات اليومية.</p>
+        <p class="text-slate-400 mt-1">تتبع مصاريفك  وسجل كل حاجة بتصرفها خلال يومك بسهولة.</p>
       </div>
 
       <!-- Quick Total Cash Display -->
@@ -217,7 +217,7 @@ const handleDeleteTransaction = async (id: string) => {
         <div v-else-if="filteredTransactions.length === 0" class="flex-1 flex flex-col items-center justify-center text-center text-slate-500 gap-3 py-12 border border-dashed border-slate-800 rounded-xl">
           <i class="pi pi-search text-3xl text-slate-600"></i>
           <span class="text-base font-semibold">لا توجد سجلات مالية متطابقة</span>
-          <p class="text-xs text-slate-400 max-w-xs">أضف بعض المعاملات من النموذج لتبدأ في تتبع تفاصيل الكاش.</p>
+          <p class="text-xs text-slate-400 max-w-xs">أضف بعض المعاملات من النموذج لتبدأ في تتبع تفاصيل مصاريفك.</p>
         </div>
 
         <div v-else class="flex-1 overflow-x-auto">
