@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         {
           "src": "/icon.svg",
           "sizes": "any",
-          "type": "image/png"
+          "type": "image/svg+xml"
         },
         {
           "src": "/icons/icon-48x48.png",
@@ -142,11 +142,17 @@ export default defineNuxtConfig({
     head: {
       title: 'دفتر المصاريف | تتبع مصاريفك وديونك',
       meta: [
-        { name: 'description', content: 'برنامج حديث لتتبع المصاريف والديون بتصميم ذهبي عصري' }
+        { name: 'description', content: 'برنامج حديث لتتبع المصاريف والديون بتصميم ذهبي عصري' },
+        // إعدادات الـ PWA للآيفون (iOS)
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'apple-mobile-web-app-title', content: 'دفتر المصاريف' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        // الأيقونة الخاصة بالآيفون وآيباد (يفضل استخدام حجم 180x180 أو 192x192)
+        { rel: 'apple-touch-icon', href: '/icons/icon-192x192.png' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap' }
       ]
