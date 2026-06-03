@@ -7,7 +7,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
+    '@vite-pwa/nuxt'
   ],
 
   primevue: {
@@ -20,6 +21,36 @@ export default defineNuxtConfig({
     'primeicons/primeicons.css',
     '~/assets/css/main.css'
   ],
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'دفتر المصاريف',
+      short_name: 'دفتر المصاريف',
+      description: 'برنامج حديث لتتبع مصاريفك وديونك بتصميم ذهبي عصري',
+      theme_color: '#0a0e17',
+      background_color: '#05070c',
+      display: 'standalone',
+      orientation: 'portrait',
+      dir: 'rtl',
+      lang: 'ar',
+      icons: [
+        {
+          src: 'icon.svg',
+          sizes: 'any',
+          type: 'image/svg+xml',
+          purpose: 'any maskable'
+        }
+      ]
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    },
+    devOptions: {
+      enabled: false // Turned off by default in dev to prevent caching conflicts, but active on build
+    }
+  },
 
   runtimeConfig: {
     public: {
@@ -39,6 +70,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'برنامج حديث لتتبع المصاريف والديون بتصميم ذهبي عصري' }
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap' }
