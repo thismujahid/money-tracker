@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   ssr: false,
 
   modules: [
@@ -62,7 +62,15 @@ export default defineNuxtConfig({
       firebaseAppId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID || '',
     }
   },
-
+  vite: {
+    optimizeDeps: {
+      include: [
+        'firebase/app',
+        'firebase/auth',
+        'firebase/firestore',
+      ]
+    }
+  },
   app: {
     head: {
       title: 'دفتر المصاريف | تتبع مصاريفك وديونك',
@@ -71,6 +79,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
+        { rel: 'manifest',  href: '/manifest.json' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap' }
